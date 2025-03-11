@@ -5,44 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Techzaken Gaarlandt Chatbot</title>
     
-    <!-- Load the default styles -->
-    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet">
-
-    <!-- Custom CSS Variables -->
-    <style>
-        :root {
-            --chat-primary-color: #007bff; /* Change primary color */
-            --chat-background-color: #f4f4f4; /* Chat background */
-            --chat-text-color: #333333; /* Chat text */
-            --chat-bubble-color: #007bff; /* Chat bubbles */
-            --chat-bubble-text-color: #ffffff; /* Bubble text */
-            --chat-input-background: #ffffff; /* Input box background */
-            --chat-input-text-color: #333333; /* Input text */
-            --chat-button-background: #007bff; /* Send button */
-            --chat-button-text-color: #ffffff; /* Send button text */
-        }
-    </style>
-</head>
-<body>
-    <div id="chat-agent-container"></div>
-
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
     <script type="module">
-        import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/module/index.js'; // Fixed Import Path
-
+        import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+    
         createChat({
-            webhookUrl: 'https://your-public-n8n-server.com/webhook/472403b0-b191-46e4-98d1-...', // Fix this URL
-            title: "Techzaken Chatbot",
-            welcomeMessage: "Hey, wat wil je vandaag weten?",
-            position: "bottom-right", // Chat widget position
-            theme: {
-                primary: "#007bff",
-                background: "#f4f4f4",
-                text: "#333333"
-            },
-            bubble: {
-                background: "var(--chat-bubble-color)", // Uses CSS variable
-                text: "var(--chat-bubble-text-color)" // Uses CSS variable
-            }
+            webhookUrl: 'YOUR_PRODUCTION_WEBHOOK_URL'
         });
     </script>
 </body>
