@@ -4,8 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Techzaken Gaarlandt Chatbot</title>
-    
     <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+
+    <style>
+        :root {
+            --chat-primary-color: #007bff; /* Example: Blue */
+            --chat-background-color: #f8f8f8; /* Example: Light Gray */
+            --chat-text-color: #333; /* Example: Dark Gray */
+            --chat-bubble-color: #e0f0ff; /* Example: Light Blue */
+            --chat-bubble-text-color: #000; /* Example: Black */
+        }
+    </style>
+
     <script type="module">
         import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
@@ -31,5 +41,8 @@
             buttonText: "Verstuur",
         });
     </script>
+</head>
+<body>
+
 </body>
 </html>
