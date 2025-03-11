@@ -27,13 +27,18 @@
     <div id="chat-agent-container"></div>
 
     <script type="module">
-        import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/index.js';
+        import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/module/index.js'; // Fixed Import Path
 
         createChat({
-            webhookUrl: 'https://n8n.techzaken.nl:5678/webhook/472403b0-b191-46e4-98d1-...',
+            webhookUrl: 'https://your-public-n8n-server.com/webhook/472403b0-b191-46e4-98d1-...', // Fix this URL
             title: "Techzaken Chatbot",
             welcomeMessage: "Hey, wat wil je vandaag weten?",
             position: "bottom-right", // Chat widget position
+            theme: {
+                primary: "#007bff",
+                background: "#f4f4f4",
+                text: "#333333"
+            },
             bubble: {
                 background: "var(--chat-bubble-color)", // Uses CSS variable
                 text: "var(--chat-bubble-text-color)" // Uses CSS variable
