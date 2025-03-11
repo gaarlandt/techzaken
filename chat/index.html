@@ -5,75 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Techzaken Gaarlandt Chatbot</title>
     <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
-
-    <style>
-        :root {
-            --chat-primary-color: #007bff; /* Example: Blue */
-            --chat-background-color: #f8f8f8; /* Example: Light Gray */
-            --chat-text-color: #333; /* Example: Dark Gray */
-            --chat-bubble-color: #e0f0ff; /* Example: Light Blue */
-            --chat-bubble-text-color: #000; /* Example: Black */
-        }
-
-        /* Ensure chat container is visible */
-        #n8n-chat {
-            width: 100%;
-            height: 500px;
-            max-width: 400px;
-            margin: auto;
-            border: 1px solid #ddd; /* Light border for visibility */
-        }
-    </style>
 </head>
 <body>
-
-    <!-- ✅ Moved the chat container inside <body> -->
-    <div id="n8n-chat"></div>
-
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
     <script type="module">
         import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
-
+    
         createChat({
-            webhookUrl: 'http://0.0.0.0:5678/webhook/472403b0-b191-46e4-98d1-a6b016844192/chat',
-
-            webhookConfig: {
-                method: 'POST',
-                headers: {} // Add custom headers if needed
-            },
-
-            target: '#n8n-chat', // ✅ Now it's properly placed in <body>
-            mode: 'embedded', // ✅ If you want pop-up mode, change to "window"
-            chatInputKey: 'chatInput',
-            chatSessionKey: 'sessionId',
-
-            metadata: {}, // Custom metadata if needed
-            showWelcomeScreen: false, // Set to true if you want a welcome screen
-            defaultLanguage: 'nl', // Set to "nl" for Dutch
-
-            initialMessages: [
-                'Hey!', 
-                'Hoe kan ik je vandaag helpen?'
-            ],
-
-            i18n: {
-                nl: { 
-                    title: 'Hallo! 👋',
-                    subtitle: "Start een chat. We helpen je graag!",
-                    footer: '',
-                    getStarted: 'Nieuwe Conversatie',
-                    inputPlaceholder: 'Typ hier je vraag...',
-                },
-                en: { 
-                    title: 'Hi there! 👋',
-                    subtitle: "Start a chat. We're here to help you 24/7.",
-                    footer: '',
-                    getStarted: 'New Conversation',
-                    inputPlaceholder: 'Type your question...',
-                }
-            }
+            webhookUrl: 'http://0.0.0.0:5678/webhook/472403b0-b191-46e4-98d1-a6b016844192/chat'
         });
-
-        console.log("✅ Chat widget loaded successfully!");
     </script>
 
 </body>
