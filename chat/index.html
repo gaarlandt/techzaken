@@ -15,9 +15,14 @@
         import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
         createChat({
-            webhookUrl: 'https://n8n.techzaken.nl/webhook/b83f54fe-3df6-4ac1-97e4-3e6110ad0f6c',
+            webhookUrl: 'https://n8n.techzaken.nl:5678/webhook/b83f54fe-3df6-4ac1-97e4-3e6110ad0f6c/chat',
             mode: 'embedded',
-            container: '#chat-container'
+            container: '#chat-container',
+            text: {
+                title: 'Welkom bij Techzaken 👋',
+                welcome: 'Hoi! 👋 Waarmee kan ik je helpen?',
+                agent: 'Techzaken Assistant'
+            }
         });
     </script>
 </body>
